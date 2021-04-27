@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gabbys Cafe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <head>
+
+    <body>
+
+        <!-- Navigation (sit on top) -->
+        <nav>
+            <div class="links">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#menu">MENU</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </nav>
+
+        <!-- Header with image -->
+        <header id="home">
+            <div class="top-title">
+                <h1>the<br>Cafe</h1>
+            </div>
+            <div class="bottom-titles">
+                <span><span class="highlight">Open from 6am to 5pm</span></span>
+                <span id="addy"><span class="highlight">15 Foodie Street, NY</span></span>
+            </div>
+        </header>
+
+
+        <!-- About Container -->
+        <section id="about">
+            <div class="container">
+                <h3><span class="highlight">ABOUT THE CAFE</span></h3>
+                <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch
+                    sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+                <br>
+                <img src="https://images.unsplash.com/photo-1484157239365-80e635261db7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+                    style="width:100%;max-width:1000px" class="w3-margin-top">
+                <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+                <p><strong>Address:</strong> 15 Foodie Street, NY</p>
+            </div>
+        </section>
+
+        <!-- Menu Container -->
+        <section id="menu">
+            <div class="container">
+
+                <h3>TODAY'S MENU</h3>
+
+                <div>
+                    <a href="javascript:void(0)" onclick="openMenu(event);">
+                        <span>View</span>
+                    </a>
+                </div>
+
+                <div id="Eat">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Container -->
+        <footer id="contact">
+            <div class="container">
+                <h3><span class="highlight">CONTACT US</span></h3>
+                <br>
+                <div class="socialLinks">
+                    <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+                </div>
+                <br>
+                <span>Phone: 123-456-7890</span>
+                <span>Email: ilovefood@gabbyscafe.com</span>
+
+            </div>
+        </footer>
+        </div>
+        <!-- End page content -->
+
+        <!-- JavaScript -->
+        <script>
+
+            let todaysMenu = [
+                { name: 'Honey Almond Granola', description: 'Vanilla Yogurt accompanied with fresh cinnamon granola, honey and an assortment of berries', price: 7.99 },
+                { name: 'Sausage Plate', description: 'Turkey sausage links with a slide of 2 scrambled eggs', price: 8.99 },
+                { name: 'Chocolate Croissant', description: 'A warm and buttery croissant with melted chocolate on the inside', price: 3.99 },
+                { name: 'Cinnamon Panckaes', description: 'A stack of 4 small cinnamon pancakes served our cinnamon sugar butter', price: 8.99 },
+                { name: 'Fruit Platter', description: 'An assortment of fruits including melon, strawberries, pineapple and blueberries', price: 4.99 }
+            ];
+
+            function setMenu(food) {
+                let menu = document.getElementById("Eat");
+                let menuString = ''
+
+                for (let i = 0; i < food.length; i++) {
+                    menuString += `<h4 class="menuItem">` + food[i].name + `</h4>
+      <p>`+ food[i].description + '</p> <p>' + food[i].price + `</p><br>`;
+                }
+
+                menu.insertAdjacentHTML('beforeEnd', menuString);
+            }
+
+            function openMenu(evt, menuName) {
+                // setMenu()
+                let x = document.getElementById("Eat")
+                x.style.display = x.style.display == 'none' ? 'block' : 'none';
+            }
+
+            setMenu(todaysMenu);
+        </script>
+
+    </body>
+
+</html>

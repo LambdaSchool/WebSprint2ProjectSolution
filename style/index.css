@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+/* General Styles */
+*{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  max-width:100%; /*this is saying you can never be bigger than your parent*/
+/*   border:1px solid grey; */
+}
+html{
+  font-size:62.5%;
+}
+body{
+  line-height:2;
+  font-size:1.5rem;
+  font-family: "Inconsolata", sans-serif;
+}
+h1, h2, h3, h4{
+  letter-spacing:3px;
+  padding:4% 0;
+}
+section{
+  padding:4% 0;
+}
+i{
+  font-size:4rem;
+}
+
+/* Header Styles */
+
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+
+
+
+
+/* nav styles start here  */
+nav{
+  width:100%;
+  background-color: black;
+}
+
+.links{
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+nav a{
+  color: white;
+  text-decoration:none;
+  letter-spacing:3px;
+}
+nav a:hover{
+  color:#AFEEEE;
+}
+/* nav styles end here  */
+
+/*header styles */
+header {
+  background-image: url("https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1930&q=80");
+  height: 90vh;
+   background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top-title {
+  width: 100%;
+}
+.top-title h1 {
+  text-align: center;
+  color: #f2f2f2;
+  font-size:90px;
+}
+.bottom-titles {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: #f2f2f2;
+}
+
+.bottom-titles span {
+  width: 50%;
+  padding: 5%;
+}
+.highlight {
+  background-color: black;
+}
+#addy {
+  text-align: right;
+}
+
+/* End of header */
+
+/* about styles */
+
+#about {
+  display:flex;
+  justify-content:center;
+}
+
+.container {
+  padding:4%;
+  text-align:center;
+  width:80%;
+}
+
+.container h3 {
+  color: #f2f2f2;
+}
+
+.container span{
+  padding: 2%;
+}
+/*end of about styles */
+
+/*menu styles */
+
+#menu {
+  display:flex;
+  justify-content:center;
+  background-color: lightgrey;
+}
+
+
+#Eat {
+  display: none;
+}
+
+.menuItem {
+  padding: 1% 0;
+  font-weight: bold;
+}
+
+
+/* end of menu style */
+
+/* contact/footer style */
+#contact {
+  display:flex;
+  justify-content:center;
+}
+
+.socialLinks{
+  display:flex;
+  justify-content:space-evenly;
+}
+
+.socialLinks a i {
+  color: black;
+}
+
+/*end of contact/footer style*/
+
+/* Media Queries */
+/*max width scales down - desktop first design*/
+
+@media(max-width: 600px){
+  
+  /* nav */
+  .links {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .links a{
+    width:100%;
+    text-align: center;
+  }
+  
+  /*header*/
+  
+  header {
+    height: 70vh;
+  }
+  .bottom-titles span, #addy {
+  width: 100%;
+  padding: 5%;
+    text-align: center;
+}
+  
+
+  
+  /*footer*/
+  
+  #contact .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .container span, .container h3, .socialLinks {
+    width: 100%;
+  }
+  
+  
+}
