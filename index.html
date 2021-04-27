@@ -25,7 +25,7 @@
     <!-- Header with image -->
     <header id="home">
         <div class="top-title">
-            <h1>the<br>Cafe</h1>
+            <h1>Gabby's<br>Cafe</h1>
         </div>
         <div class="bottom-titles">
             <span><span class="highlight">Open from 6am to 5pm</span></span>
@@ -55,7 +55,7 @@
     <section id="menu">
         <div class="container">
 
-            <h3>TODAY'S MENU</h3>
+            <h3 id="menuHeader">TODAY'S MENU</h3>
 
             <div>
                 <a href="javascript:void(0)" onclick="openMenu(event);">
@@ -63,7 +63,7 @@
                 </a>
             </div>
 
-            <div id="Eat">
+            <div id="eat">
             </div>
         </div>
     </section>
@@ -99,7 +99,7 @@
         ];
 
         function setMenu(food) {
-            let menu = document.getElementById("Eat");
+            let menu = document.getElementById("eat");
             let menuString = ''
 
             for (let i = 0; i < food.length; i++) {
@@ -110,13 +110,14 @@
             menu.insertAdjacentHTML('beforeEnd', menuString);
         }
 
-        function openMenu(evt, menuName) {
+        function openMenu(evt) {
             // setMenu()
-            let x = document.getElementById("Eat")
+            let x = document.getElementById("eat")
             x.style.display = x.style.display == 'none' ? 'block' : 'none';
         }
 
         setMenu(todaysMenu);
+        // document.getElementById("eat").click();
     </script>
 
 </body>

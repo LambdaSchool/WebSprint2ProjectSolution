@@ -132,8 +132,10 @@ header {
   background-color: lightgrey;
 }
 
-
-#Eat {
+#menuHeader {
+  color: black;
+}
+#eat {
   display: none;
 }
 
@@ -181,7 +183,7 @@ header {
   /*header*/
   
   header {
-    height: 70vh;
+    height: 80vh;
   }
   .bottom-titles span, #addy {
   width: 100%;
