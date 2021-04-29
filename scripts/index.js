@@ -12,8 +12,8 @@ function setMenu(food) {
     let menuString = ''
 
     for (let i = 0; i < food.length; i++) {
-        menuString += `<h4 class="menuItem">` + food[i].name + `</h4>
-      <p>`+ food[i].description + '</p> <p>' + food[i].price + `</p><br>`;
+        menuString += `<h4 class="menuItem">${food[i].name }</h4>
+      <p>${food[i].description}</p> <p>${food[i].price}</p><br>`;
     }
 
     menu.insertAdjacentHTML('beforeEnd', menuString);
